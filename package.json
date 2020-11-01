@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "frontend": "npm run start --prefix client",
+    "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run start\" \"npm run start --prefix client\"",
-    "install-client": "npm install --prefix client"
+    "install-client": "npm install --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Ridham",
   "license": "ISC",
