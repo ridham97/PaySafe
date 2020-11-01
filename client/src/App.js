@@ -36,7 +36,7 @@ function App() {
     const { firstName, lastName, email, phone, amount} = data;
     e.preventDefault();
     setIsLoading(true);
-    Axios.post("http://localhost:5000/api/token", data).then((response) => {
+    Axios.post("api/token", data).then((response) => {
       const token = response.data.token;
       const billingAddress = {
         city: data.city,
